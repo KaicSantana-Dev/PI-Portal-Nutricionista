@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Cliente</title>
+  <link rel="stylesheet" href="sytless.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Barra lateral -->
+    <div class="sidebar">
+      <div class="perfil">
+        <input type="file" id="uploadFoto" class="upload-foto" onchange="carregarFoto(event)">
+        <img src="img/download.jpg" alt="Foto de Perfil" id="fotoPerfil">
+        <h2>Maria Souza</h2>
+        <p>Paciente</p>
+      </div>
+
+      <nav class="menu">
+        <button onclick="mostrarSecao('consultas')">Histórico de Consultas</button>
+        <button onclick="mostrarSecao('dieta')">Minha Dieta</button>
+        <button onclick="mostrarSecao('treino')">Meu Treino</button>
+        <button onclick="mostrarSecao('dados')">Meus Dados</button>
+      </nav>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="conteudo">
+      <section id="consultas" class="secao">
+        <h3>Histórico de Consultas</h3>
+        <ul>
+          <li>10/04/2025 - Consulta com Dra. Ana</li>
+          <li>25/03/2025 - Consulta com Dr. Pedro</li>
+        </ul>
+      </section>
+
+      <section id="dieta" class="secao">
+        <h3>Plano Alimentar</h3>
+        <p><strong>Café da manhã:</strong> Omelete + Suco de laranja</p>
+        <p><strong>Almoço:</strong> Frango grelhado + Arroz integral + Salada</p>
+        <p><strong>Jantar:</strong> Sopa de legumes + Pão integral</p>
+      </section>
+
+      <section id="treino" class="secao">
+        <h3>Plano de Treino</h3>
+        <p><strong>Segunda:</strong> Musculação (pernas)</p>
+        <p><strong>Terça:</strong> Corrida leve 30min</p>
+        <p><strong>Quarta:</strong> Pilates</p>
+      </section>
+
+      <section id="dados" class="secao">
+        <h3>Meus Dados</h3>
+        <p><strong>Email:</strong> maria@email.com</p>
+        <p><strong>Telefone:</strong> (11) 91234-5678</p>
+        <p><strong>Endereço:</strong> Rua Fit, 123 - SP</p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function mostrarSecao(secaoId) {
+      const secoes = document.querySelectorAll('.secao');
+      secoes.forEach(secao => secao.style.display = 'none');
+      const secaoAtiva = document.getElementById(secaoId);
+      secaoAtiva.style.display = 'block';
+    }
+
+    function carregarFoto(event) {
+      const foto = document.getElementById('fotoPerfil');
+      foto.src = URL.createObjectURL(event.target.files[0]);
+    }
+
+    mostrarSecao('consultas');
+  </script>
+</body>
+</html>
