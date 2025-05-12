@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/Cadastro.css">
+    <script src="Scripts/Cadastro.js"></script>"</script>
+    <title>Cadastro do cliente</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cadastro</title>
+    </head>
+    <body>
+    
+      <div class="container">
+        <h2>Cadastro</h2>
+    
+        <label for="tipo">Sou:</label>
+        <select id="tipo" onchange="alternarFormulario()">
+          <option value="cliente">Cliente</option>
+          <option value="nutricionista">Nutricionista</option>
+        </select>
+    
+        <!-- Formulário Cliente -->
+        <form id="formCliente">
+          <label>Nome:</label>
+          <input type="text" name="nome" required>
+    
+          <label>Email:</label>
+          <input type="email" name="email" required>
+    
+          <label>Data de Nascimento:</label>
+          <input type="date" name="data_nascimento" required>
+    
+          <button type="submit">Cadastrar Cliente</button>
+        </form>
+    
+        <!-- Formulário Nutricionista -->
+        <form id="formNutricionista" class="hidden">
+          <label>Nome:</label>
+          <input type="text" name="nome" required>
+    
+          <label>Email:</label>
+          <input type="email" name="email" required>
+    
+          <label>CRN (Registro Profissional):</label>
+          <input type="text" name="crn" required>
+    
+          <label>Especialidade:</label>
+          <input type="text" name="especialidade" required>
+    
+          <button type="submit">Cadastrar Nutricionista</button>
+        </form>
+      </div>
+    </body>
+    </html>
+    
+</body>
+</html>
