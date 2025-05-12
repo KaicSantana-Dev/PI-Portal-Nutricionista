@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scripts/PainelCliente.js"></script>
   <title>Painel do Cliente</title>
-  <link rel="stylesheet" href="sytless.css">
+  <link rel="stylesheet" href="styles/PainelCliente.css">
 </head>
 <body>
   <div class="container">
@@ -12,7 +13,7 @@
     <div class="sidebar">
       <div class="perfil">
         <input type="file" id="uploadFoto" class="upload-foto" onchange="carregarFoto(event)">
-        <img src="img/download.jpg" alt="Foto de Perfil" id="fotoPerfil">
+        <img src="Assets/ExemploCliente.png" alt="Foto de Perfil" id="fotoPerfil">
         <h2>Maria Souza</h2>
         <p>Paciente</p>
       </div>
@@ -57,21 +58,5 @@
       </section>
     </div>
   </div>
-
-  <script>
-    function mostrarSecao(secaoId) {
-      const secoes = document.querySelectorAll('.secao');
-      secoes.forEach(secao => secao.style.display = 'none');
-      const secaoAtiva = document.getElementById(secaoId);
-      secaoAtiva.style.display = 'block';
-    }
-
-    function carregarFoto(event) {
-      const foto = document.getElementById('fotoPerfil');
-      foto.src = URL.createObjectURL(event.target.files[0]);
-    }
-
-    mostrarSecao('consultas');
-  </script>
 </body>
 </html>
