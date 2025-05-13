@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scripts/Nutricionista.js"></script>
   <title>Painel do Nutricionista</title>
   <link rel="stylesheet" href="styles/Painelnutricionista.css">
 </head>
 <body>
   <div class="container">
-    <!-- Barra lateral do nutricionista -->
     <div class="sidebar">
       <div class="perfil">
         <input type="file" id="uploadFotoNutri" class="upload-foto" onchange="carregarFotoNutri(event)">
-        <img src="img/nutri.jpg" alt="Foto de Perfil" id="fotoPerfilNutri">
+        <img src="Assets/nutri.jpg" alt="Foto de Perfil" id="fotoPerfilNutri">
         <h2>Dr. Pedro Oliveira</h2>
         <p>Nutricionista</p>
       </div>
@@ -25,7 +25,6 @@
       </nav>
     </div>
 
-    <!-- Conteúdo principal -->
     <div class="conteudo">
       <section id="clientes" class="secao">
         <h3>Meus Clientes</h3>
@@ -70,49 +69,5 @@
       </section>
     </div>
   </div>
-
-  <script>
-    function mostrarSecao(secaoId) {
-      const secoes = document.querySelectorAll('.secao');
-      secoes.forEach(secao => secao.style.display = 'none');
-      const secaoAtiva = document.getElementById(secaoId);
-      secaoAtiva.style.display = 'block';
-    }
-
-    function carregarFotoNutri(event) {
-      const foto = document.getElementById('fotoPerfilNutri');
-      foto.src = URL.createObjectURL(event.target.files[0]);
-    }
-
-    function iniciarChat(cliente) {
-      // Mostrar a seção de chat e o nome do cliente
-      document.getElementById('chat').style.display = 'block';
-      document.getElementById('clienteNome').textContent = cliente;
-
-      // Limpar o campo de mensagens ao iniciar um novo chat
-      document.getElementById('mensagens').innerHTML = '';
-      document.getElementById('novaMensagem').value = '';
-    }
-
-    function enviarMensagem() {
-      const mensagem = document.getElementById('novaMensagem').value;
-      if (mensagem.trim() !== '') {
-        // Adicionar a mensagem na tela
-        const mensagens = document.getElementById('mensagens');
-        const novaMensagem = document.createElement('div');
-        novaMensagem.classList.add('mensagem');
-        novaMensagem.textContent = mensagem;
-        mensagens.appendChild(novaMensagem);
-
-        // Limpar o campo de entrada de texto
-        document.getElementById('novaMensagem').value = '';
-        
-        // Manter o chat sempre visível
-        mensagens.scrollTop = mensagens.scrollHeight;
-      }
-    }
-
-    mostrarSecao('clientes');
-  </script>
 </body>
 </html>

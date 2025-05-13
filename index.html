@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriConnect | Conectando nutricionistas e clientes</title>
     <link rel="stylesheet" href="styles/Home.css">
+    <script src="scripts/Home.js"></script>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
@@ -31,11 +31,10 @@
             
             <div class="auth-buttons">
                 <a href="#" class="login-btn" onclick="openModal('login-modal')">Login</a>
-                <a href="#" class="signup-btn" onclick="openModal('signup-modal')">Cadastre-se</a>
+                <a href="cadastro.html" class="signup-btn" onclick="openModal('signup-modal')">Cadastre-se</a>
             </div>
         </div>
     </header>
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Encontre o nutricionista ideal para seus objetivos</h1>
@@ -43,8 +42,6 @@
             <a href="#" class="cta-btn" onclick="openModal('signup-modal')">Comece agora</a>
         </div>
     </section>
-
-    <!-- Features Section -->
     <section class="features">
         <div class="container">
             <div class="section-title">
@@ -96,7 +93,6 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
             <div class="section-title">
@@ -167,12 +163,9 @@
         </div>
     </section>
 
-    <!-- Novo Rodapé Intuitivo -->
     <footer class="footer">
         <div class="container footer-container">
-            <!-- Seção principal do rodapé -->
             <div class="footer-main">
-                <!-- Logo e descrição -->
                 <div class="footer-brand">
                     <a href="#" class="footer-logo">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -184,8 +177,6 @@
                     </a>
                     <p class="footer-tagline">Transformando vidas através da nutrição personalizada</p>
                 </div>
-                
-                <!-- Links importantes organizados por categoria -->
                 <div class="footer-links-grid">
                     <div class="footer-links-category">
                         <h4>Para Você</h4>
@@ -203,8 +194,6 @@
                         <a href="#">Parcerias</a>
                     </div>
                 </div>
-                
-                <!-- Contato e redes sociais -->
                 <div class="footer-connect">
                     <h4>Fale Conosco</h4>
                     <div class="footer-contact">
@@ -257,7 +246,7 @@
                 </div>
             </div>
             
-            <!-- Barra inferior com copyright e links rápidos -->
+
             <div class="footer-bottom">
                 <div class="footer-copyright">
                     <p>© 2025 NutriConnect. Todos os direitos reservados.</p>
@@ -284,33 +273,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript para funcionalidades da página -->
-    <script>
-        // Função para abrir modais
-        function openModal(modalId) {
-            // Implementação de abertura de modal aqui
-            console.log("Abrindo modal: " + modalId);
-        }
-        
-        // Função para alternar entre abas
-        function openTab(tabId) {
-            // Ocultar todas as abas
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // Desativar todos os botões
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Mostrar a aba selecionada
-            document.getElementById(tabId).classList.add('active');
-            
-            // Ativar o botão correspondente
-            event.currentTarget.classList.add('active');
-        }
-    </script>
 </body>
 </html>
