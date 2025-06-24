@@ -1,73 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="scripts/Nutricionista.js"></script>
-  <title>Painel do Nutricionista</title>
-  <link rel="stylesheet" href="styles/Painelnutricionista.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Nutricionista</title>
+    <link rel="stylesheet" href="styles/Painelnutricionista.css">
+    <script src="scripts/Nutricionista.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="perfil">
-        <input type="file" id="uploadFotoNutri" class="upload-foto" onchange="carregarFotoNutri(event)">
-        <img src="Assets/nutri.jpg" alt="Foto de Perfil" id="fotoPerfilNutri">
-        <h2>Dr. Pedro Oliveira</h2>
-        <p>Nutricionista</p>
-      </div>
 
-      <nav class="menu">
-        <button onclick="mostrarSecao('clientes')">Meus Clientes</button>
-        <button onclick="mostrarSecao('consultas')">Consultas Agendadas</button>
-        <button onclick="mostrarSecao('planos')">Planos Alimentares</button>
-        <button onclick="mostrarSecao('dados')">Meus Dados</button>
-      </nav>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Nutri<span>Connect</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#how-it-works">Como Funciona</a></li>
+                    <li><a href="#">Sou Nutricionista</a></li>
+                    <li><a href="#">Sou Cliente</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="#" class="profile-btn">Perfil</a> 
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="perfil">
+                <input type="file" id="uploadFotoNutri" class="upload-foto" onchange="carregarFotoNutri(event)">
+                <img src="Assets/nutri.jpg" alt="Foto de Perfil" id="fotoPerfilNutri">
+                <h2>Dr. Pedro Oliveira</h2>
+                <p>Nutricionista</p>
+            </div>
+
+            <nav class="menu">
+                <button onclick="mostrarSecao('clientes')">Meus Clientes</button>
+                <button onclick="mostrarSecao('consultas')">Consultas Agendadas</button>
+                <button onclick="mostrarSecao('planos')">Planos Alimentares</button>
+                <button onclick="mostrarSecao('dados')">Meus Dados</button>
+            </nav>
+        </div>
+
+        <div class="conteudo">
+            <section id="clientes" class="secao active">
+                <h3>Meus Clientes</h3>
+                <ul>
+                    <li>
+                        Maria Souza - Última consulta: 10/04/2025 
+                        <button class="chat-btn" onclick="iniciarChat('Maria Souza')">Iniciar Chat</button>
+                    </li>
+                    <li>
+                        João Silva - Última consulta: 12/03/2025 
+                        <button class="chat-btn" onclick="iniciarChat('João Silva')">Iniciar Chat</button>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="consultas" class="secao">
+                <h3>Consultas Agendadas</h3>
+                <ul>
+                    <li>15/05/2025 - 14:00 - Maria Souza</li>
+                    <li>18/05/2025 - 10:00 - João Silva</li>
+                </ul>
+            </section>
+
+            <section id="planos" class="secao">
+                <h3>Planos Alimentares</h3>
+                <ul>
+                    <li><strong>Maria Souza:</strong> Dieta de emagrecimento</li>
+                    <li><strong>João Silva:</strong> Dieta para hipertrofia</li>
+                </ul>
+            </section>
+
+            <section id="dados" class="secao">
+                <h3>Meus Dados</h3>
+                <p><strong>Email:</strong> pedro@nuto.com</p>
+                <p><strong>Telefone:</strong> (11) 98765-4321</p>
+                <p><strong>Especialidade:</strong> Nutrição esportiva</p>
+            </section>
+
+            <section id="chat" class="secao">
+                <h3>Chat com <span id="clienteNome">Maria Souza</span></h3>
+                <div id="mensagens" class="chat-box"></div>
+                <textarea id="novaMensagem" placeholder="Digite sua mensagem..."></textarea>
+                <button onclick="enviarMensagem()">Enviar</button>
+            </section>
+        </div>
     </div>
 
-    <div class="conteudo">
-      <section id="clientes" class="secao">
-        <h3>Meus Clientes</h3>
-        <ul>
-          <li>Maria Souza - Última consulta: 10/04/2025 
-            <button class="chat-btn" onclick="iniciarChat('Maria Souza')">Iniciar Chat</button>
-          </li>
-          <li>João Silva - Última consulta: 12/03/2025 
-            <button class="chat-btn" onclick="iniciarChat('João Silva')">Iniciar Chat</button>
-          </li>
-        </ul>
-      </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">Nutri<span>Connect</span></span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Termos</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Contato</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="Assets/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Assets/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Assets/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 NutriConnect. Todos os direitos reservados.
+        </div>
+    </footer>
 
-      <section id="consultas" class="secao">
-        <h3>Consultas Agendadas</h3>
-        <ul>
-          <li>15/05/2025 - 14:00 - Maria Souza</li>
-          <li>18/05/2025 - 10:00 - João Silva</li>
-        </ul>
-      </section>
-
-      <section id="planos" class="secao">
-        <h3>Planos Alimentares</h3>
-        <ul>
-          <li><strong>Maria Souza:</strong> Dieta de emagrecimento</li>
-          <li><strong>João Silva:</strong> Dieta para hipertrofia</li>
-        </ul>
-      </section>
-
-      <section id="dados" class="secao">
-        <h3>Meus Dados</h3>
-        <p><strong>Email:</strong> pedro@nuto.com</p>
-        <p><strong>Telefone:</strong> (11) 98765-4321</p>
-        <p><strong>Especialidade:</strong> Nutrição esportiva</p>
-      </section>
-
-      <section id="chat" class="secao" style="display:none;">
-        <h3>Chat com <span id="clienteNome">Maria Souza</span></h3>
-        <div id="mensagens" class="chat-box"></div>
-        <textarea id="novaMensagem" placeholder="Digite sua mensagem..."></textarea>
-        <button onclick="enviarMensagem()">Enviar</button>
-      </section>
-    </div>
-  </div>
 </body>
 </html>

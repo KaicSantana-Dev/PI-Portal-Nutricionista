@@ -1,60 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="scripts/PainelCliente.js"></script>
-  <link rel="stylesheet" href="styles/PainelCliente.css">
-  <title>Painel do Cliente</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Cliente</title>
+    <link rel="stylesheet" href="styles/PainelCliente.css">
+    <script src="scripts/PainelCliente.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="perfil">
-        <input type="file" id="uploadFoto" class="upload-foto" onchange="carregarFoto(event)">
-        <img src="Assets/ExemploCliente.png" alt="Foto de Perfil" id="fotoPerfil">
-        <h2>Maria Souza</h2>
-        <p>Paciente</p>
-      </div>
 
-      <nav class="menu">
-        <button onclick="mostrarSecao('consultas')">Histórico de Consultas</button>
-        <button onclick="mostrarSecao('dieta')">Minha Dieta</button>
-        <button onclick="mostrarSecao('treino')">Meu Treino</button>
-        <button onclick="mostrarSecao('dados')">Meus Dados</button>
-      </nav>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Nutri<span>Connect</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#how-it-works">Como Funciona</a></li>
+                    <li><a href="#">Sou Nutricionista</a></li>
+                    <li><a href="#">Sou Cliente</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="#" class="profile-btn">Perfil</a> 
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="perfil">
+                <input type="file" id="uploadFoto" class="upload-foto" onchange="carregarFoto(event)">
+                <img src="Assets/ExemploCliente.png" alt="Foto de Perfil" id="fotoPerfil">
+                <h2>Maria Souza</h2>
+                <p>Paciente</p>
+            </div>
+
+            <nav class="menu">
+                <button onclick="mostrarSecao('consultas')">Histórico de Consultas</button>
+                <button onclick="mostrarSecao('dieta')">Minha Dieta</button>
+                <button onclick="mostrarSecao('treino')">Meu Treino</button>
+                <button onclick="mostrarSecao('dados')">Meus Dados</button>
+            </nav>
+        </div>
+
+        <div class="conteudo">
+            <section id="consultas" class="secao active">
+                <h3>Histórico de Consultas</h3>
+                <ul>
+                    <li>10/04/2025 - Consulta com Dra. Ana</li>
+                    <li>25/03/2025 - Consulta com Dr. Pedro</li>
+                </ul>
+            </section>
+
+            <section id="dieta" class="secao">
+                <h3>Plano Alimentar</h3>
+                <p><strong>Café da manhã:</strong> Omelete + Suco de laranja</p>
+                <p><strong>Almoço:</strong> Frango grelhado + Arroz integral + Salada</p>
+                <p><strong>Jantar:</strong> Sopa de legumes + Pão integral</p>
+            </section>
+
+            <section id="treino" class="secao">
+                <h3>Plano de Treino</h3>
+                <p><strong>Segunda:</strong> Musculação (pernas)</p>
+                <p><strong>Terça:</strong> Corrida leve 30min</p>
+                <p><strong>Quarta:</strong> Pilates</p>
+            </section>
+
+            <section id="dados" class="secao">
+                <h3>Meus Dados</h3>
+                <p><strong>Email:</strong> maria@email.com</p>
+                <p><strong>Telefone:</strong> (11) 91234-5678</p>
+                <p><strong>Endereço:</strong> Rua Fit, 123 - SP</p>
+            </section>
+        </div>
     </div>
 
-    <div class="conteudo">
-      <section id="consultas" class="secao">
-        <h3>Histórico de Consultas</h3>
-        <ul>
-          <li>10/04/2025 - Consulta com Dra. Ana</li>
-          <li>25/03/2025 - Consulta com Dr. Pedro</li>
-        </ul>
-      </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">Nutri<span>Connect</span></span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Termos</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Contato</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="Assets/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Assets/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Assets/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 NutriConnect. Todos os direitos reservados.
+        </div>
+    </footer>
 
-      <section id="dieta" class="secao">
-        <h3>Plano Alimentar</h3>
-        <p><strong>Café da manhã:</strong> Omelete + Suco de laranja</p>
-        <p><strong>Almoço:</strong> Frango grelhado + Arroz integral + Salada</p>
-        <p><strong>Jantar:</strong> Sopa de legumes + Pão integral</p>
-      </section>
-
-      <section id="treino" class="secao">
-        <h3>Plano de Treino</h3>
-        <p><strong>Segunda:</strong> Musculação (pernas)</p>
-        <p><strong>Terça:</strong> Corrida leve 30min</p>
-        <p><strong>Quarta:</strong> Pilates</p>
-      </section>
-
-      <section id="dados" class="secao">
-        <h3>Meus Dados</h3>
-        <p><strong>Email:</strong> maria@email.com</p>
-        <p><strong>Telefone:</strong> (11) 91234-5678</p>
-        <p><strong>Endereço:</strong> Rua Fit, 123 - SP</p>
-      </section>
-    </div>
-  </div>
 </body>
 </html>

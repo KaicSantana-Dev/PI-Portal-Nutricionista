@@ -93,11 +93,11 @@ header nav ul li a:hover {
 
 .container {
     display: flex;
+    min-height: calc(100vh - 70px); 
     margin-top: 70px; 
-    min-height: calc(100vh - 70px);
 }
 
-/* Sidebar */
+
 .sidebar {
     width: 250px;
     background-color: #2EC4B6;
@@ -111,8 +111,8 @@ header nav ul li a:hover {
     left: 0;
     bottom: 0;
     overflow-y: auto;
-   
     padding-top: 70px; 
+}
 
 .perfil {
     text-align: center;
@@ -172,18 +172,16 @@ header nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Conteúdo */
+
 .conteudo {
     margin-left: 250px; 
     padding: 30px 40px;
     flex: 1;
     background: white;
-  
     min-height: calc(100vh - 70px); 
     padding-top: 30px; 
 }
 
-/* Seções */
 .secao {
     display: none;
 }
@@ -244,47 +242,13 @@ header nav ul li a:hover {
 }
 
 
-.chat-btn {
-    background-color: #2EC4B6; 
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.chat-btn:hover {
-    background-color: #279a92;
-}
-
-.chat-box {
-    border: 1px solid #ddd;
-    padding: 15px;
-    height: 200px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-}
-
-#novaMensagem {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    resize: vertical; 
-}
-
-
 .footer {
     background-color: #111;
     color: #ccc;
     padding: 15px 0;
     width: calc(100% - 250px); 
     margin-left: 250px; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 

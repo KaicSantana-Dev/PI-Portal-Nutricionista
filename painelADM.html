@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Nutricionista</title>
+    <link rel="stylesheet" href="styles/adm.css">
+    <script src="scripts/adm.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Nutri<span>Connect</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#how-it-works">Como Funciona</a></li>
+                    <li><a href="#">Sou Nutricionista</a></li>
+                    <li><a href="#">Sou Cliente</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="#" class="profile-btn">Perfil</a> 
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="perfil">
+                <input type="file" id="uploadFoto" class="upload-foto" onchange="carregarFoto(event)">
+                <img src="Assets/adm.png" alt="Foto de Perfil" id="fotoPerfil">
+                <h2>Administrador</h2>
+                <p>Admin do Sistema</p>
+            </div>
+
+            <nav class="menu">
+                <button onclick="mostrarSecao('clientes')">Gerenciar Clientes</button>
+                <button onclick="mostrarSecao('consultas')">Consultas</button>
+                <button onclick="mostrarSecao('dietas')">Dietas</button>
+                <button onclick="mostrarSecao('treinos')">Treinos</button>
+                <button onclick="mostrarSecao('config')">Configurações</button>
+            </nav>
+        </div>
+
+        <div class="conteudo">
+            <section id="clientes" class="secao active">
+                <h3>Gerenciar Clientes</h3>
+                <ul>
+                    <li>Maria Souza - <button>Editar</button> <button>Excluir</button></li>
+                    <li>João Silva - <button>Editar</button> <button>Excluir</button></li>
+                    <li>Fernanda Lima - <button>Editar</button> <button>Excluir</button></li>
+                </ul>
+                <button>Adicionar Novo Cliente</button>
+            </section>
+
+            <section id="consultas" class="secao">
+                <h3>Consultas Marcadas</h3>
+                <ul>
+                    <li>10/04/2025 - Maria Souza com Dra. Ana - <button>Editar</button> <button>Cancelar</button></li>
+                    <li>15/04/2025 - João Silva com Dr. Pedro - <button>Editar</button> <button>Cancelar</button></li>
+                </ul>
+                <button>Adicionar Consulta</button>
+            </section>
+
+            <section id="dietas" class="secao">
+                <h3>Planos Alimentares</h3>
+                <ul>
+                    <li>Maria Souza - Dieta A - <button>Editar</button> <button>Excluir</button></li>
+                    <li>João Silva - Dieta B - <button>Editar</button> <button>Excluir</button></li>
+                </ul>
+                <button>Criar Nova Dieta</button>
+            </section>
+
+            <section id="treinos" class="secao">
+                <h3>Planos de Treino</h3>
+                <ul>
+                    <li>Maria Souza - Treino A - <button>Editar</button> <button>Excluir</button></li>
+                    <li>João Silva - Treino B - <button>Editar</button> <button>Excluir</button></li>
+                </ul>
+                <button>Criar Novo Treino</button>
+            </section>
+
+            <section id="config" class="secao">
+                <h3>Configurações do Sistema</h3>
+                <p><strong>Email de contato:</strong> suporte@academia.com</p>
+                <p><strong>Telefone:</strong> (11) 90000-0000</p>
+                <p><strong>Endereço:</strong> Rua Fit, 456 - SP</p>
+            </section>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">Nutri<span>Connect</span></span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Termos</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Contato</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="Assets/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Assets/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Assets/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 NutriConnect. Todos os direitos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
