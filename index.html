@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriConnect - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">NutriConnect</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="buscar.html">Buscar Nutricionista</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="painel_cliente.html">Painel Cliente</a></li>
+          <li class="nav-item"><a class="nav-link" href="painel_nutricionista.html">Painel Nutricionista</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <header class="bg-success text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Bem-vindo ao NutriConnect</h1>
+      <p class="lead">A plataforma que conecta pacientes e nutricionistas para uma vida mais saudável.</p>
+      <a href="buscar.html" class="btn btn-light btn-lg mt-3">Encontrar Nutricionista</a>
+    </div>
+  </header>
+
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>O que é o NutriConnect?</h2>
+        <p>O NutriConnect é uma plataforma simples e eficiente para conectar pacientes a nutricionistas qualificados. Cadastre-se, encontre profissionais e melhore sua saúde de forma prática e segura.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <!-- SVG de alimentos saudáveis -->
+        <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="90" cy="140" rx="70" ry="25" fill="#43cea2" fill-opacity="0.2"/>
+          <circle cx="60" cy="90" r="30" fill="#43cea2"/>
+          <circle cx="120" cy="80" r="25" fill="#185a9d"/>
+          <ellipse cx="90" cy="110" rx="18" ry="10" fill="#fff" fill-opacity="0.7"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Benefícios do NutriConnect</h2>
+    <div class="row g-4">
+      <div class="col-md-4 text-center">
+        <!-- SVG de consulta online -->
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="20" width="80" height="60" rx="8" fill="#43cea2"/>
+          <rect x="20" y="30" width="60" height="30" rx="5" fill="#fff"/>
+          <circle cx="50" cy="60" r="8" fill="#185a9d"/>
+          <rect x="40" y="70" width="20" height="6" rx="3" fill="#fff"/>
+        </svg>
+        <h5>Consultas Online</h5>
+        <p>Agende e realize consultas sem sair de casa, com praticidade e segurança.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <!-- SVG de acompanhamento personalizado -->
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="20" width="60" height="60" rx="15" fill="#185a9d"/>
+          <circle cx="50" cy="50" r="18" fill="#43cea2"/>
+          <rect x="45" y="40" width="10" height="20" rx="5" fill="#fff"/>
+        </svg>
+        <h5>Acompanhamento Personalizado</h5>
+        <p>Receba orientações e dietas personalizadas de acordo com seu objetivo.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <!-- SVG de conexão segura (cadeado digital) -->
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="45" width="40" height="30" rx="8" fill="#43cea2"/>
+          <rect x="40" y="35" width="20" height="20" rx="10" fill="#fff"/>
+          <rect x="47" y="60" width="6" height="10" rx="3" fill="#185a9d"/>
+          <circle cx="50" cy="65" r="2" fill="#fff"/>
+        </svg>
+        <h5>Conexão Segura</h5>
+        <p>Encontre nutricionistas certificados e avalie o atendimento recebido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Como funciona?</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-3 text-center">
+        <div class="p-3 border rounded shadow-sm bg-white">
+          <span class="display-5 text-success">1</span>
+          <h6 class="mt-2">Cadastre-se</h6>
+          <p>Crie sua conta como paciente ou nutricionista.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="p-3 border rounded shadow-sm bg-white">
+          <span class="display-5 text-success">2</span>
+          <h6 class="mt-2">Encontre</h6>
+          <p>Busque nutricionistas ou pacientes na plataforma.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="p-3 border rounded shadow-sm bg-white">
+          <span class="display-5 text-success">3</span>
+          <h6 class="mt-2">Conecte-se</h6>
+          <p>Agende consultas, receba orientações e acompanhe sua saúde.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Área exclusiva para usuários logados -->
+  <section class="container my-5 d-none" id="areaLogada">
+    <div id="painelCliente" class="d-none">
+      <h2 class="mb-4">Painel do Cliente</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Fazer Consulta</h5>
+              <p class="card-text">Agende uma nova consulta com um nutricionista.</p>
+              <a href="#" class="btn btn-success">Agendar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Histórico de Consultas</h5>
+              <p class="card-text">Veja todas as suas consultas realizadas.</p>
+              <a href="#" class="btn btn-outline-success">Ver Histórico</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Informações Pessoais</h5>
+              <p class="card-text">Gerencie seus dados e preferências.</p>
+              <a href="#" class="btn btn-outline-secondary">Editar Perfil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="painelNutricionista" class="d-none">
+      <h2 class="mb-4">Painel do Nutricionista</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Aprovar Consultas</h5>
+              <p class="card-text">Veja e aprove solicitações de consulta de pacientes.</p>
+              <a href="#" class="btn btn-success">Ver Solicitações</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Passar Dieta</h5>
+              <p class="card-text">Envie planos alimentares personalizados para seus clientes.</p>
+              <a href="#" class="btn btn-outline-success">Criar Dieta</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Conversar com Cliente</h5>
+              <p class="card-text">Tire dúvidas e acompanhe o progresso dos pacientes.</p>
+              <a href="#" class="btn btn-outline-secondary">Acessar Chat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 mt-auto border-top">
+    <div class="container">
+      <span class="text-muted">&copy; 2024 NutriConnect. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Scripts/main.js"></script>
+</body>
+</html> 

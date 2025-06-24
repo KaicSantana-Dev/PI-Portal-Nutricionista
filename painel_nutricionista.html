@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriConnect - Painel do Nutricionista</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    .sidebar {
+      min-height: 70vh;
+      border-radius: 1rem;
+      background: #f8fafc;
+      box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.03);
+    }
+    .sidebar .nav-link.active {
+      background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+      color: #fff !important;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        min-height: auto;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar padrão -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">NutriConnect</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="buscar.html">Buscar Nutricionista</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link active" href="painel_nutricionista.html">Painel Nutricionista</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal com sidebar -->
+  <div class="container py-5">
+    <h2 class="mb-4 text-center">Painel do Nutricionista</h2>
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <div class="sidebar p-3">
+          <nav class="nav flex-column nav-pills gap-2">
+            <a class="nav-link active" id="nav-agenda" href="#" onclick="showSection('agenda')">Agenda</a>
+            <a class="nav-link" id="nav-feedback" href="#" onclick="showSection('feedback')">Feedback dos Pacientes</a>
+            <a class="nav-link" id="nav-perfil" href="#" onclick="showSection('perfil')">Perfil Profissional</a>
+          </nav>
+        </div>
+      </div>
+      <!-- Área de conteúdo -->
+      <div class="col-md-9">
+        <div id="section-agenda">
+          <h4>Agenda de Consultas Futuras</h4>
+          <p>Veja suas próximas consultas agendadas.</p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Paciente</th>
+                <th>Observações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>15/05/2024</td>
+                <td>09:00</td>
+                <td>Maria Oliveira</td>
+                <td>Primeira consulta</td>
+              </tr>
+              <tr>
+                <td>16/05/2024</td>
+                <td>14:30</td>
+                <td>João Souza</td>
+                <td>Retorno</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="section-feedback" class="d-none">
+          <h4>Feedback dos Pacientes</h4>
+          <p>Veja o que seus pacientes estão dizendo sobre seu atendimento.</p>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Maria Oliveira:</strong> "Excelente atendimento, muito atenciosa!"
+            </li>
+            <li class="list-group-item">
+              <strong>João Souza:</strong> "Gostei muito das orientações e do plano alimentar."
+            </li>
+          </ul>
+        </div>
+        <div id="section-perfil" class="d-none">
+          <h4>Perfil Profissional</h4>
+          <p>Gerencie suas informações profissionais.</p>
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" value="Dra. Ana Paula">
+            </div>
+            <div class="col-md-6">
+              <label for="crn" class="form-label">CRN</label>
+              <input type="text" class="form-control" id="crn" value="12345">
+            </div>
+            <div class="col-12">
+              <label for="especialidade" class="form-label">Especialidade</label>
+              <input type="text" class="form-control" id="especialidade" value="Nutrição Esportiva">
+            </div>
+            <div class="col-12">
+              <label for="sobre" class="form-label">Sobre</label>
+              <textarea class="form-control" id="sobre" rows="3">Especialista em nutrição esportiva, ajudando atletas a alcançarem seu melhor desempenho.</textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-success">Salvar Alterações</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer padrão -->
+  <footer class="bg-light text-center py-4 mt-auto border-top">
+    <div class="container">
+      <span class="text-muted">&copy; 2024 NutriConnect. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script>
+    function showSection(section) {
+      document.getElementById('nav-agenda').classList.remove('active');
+      document.getElementById('nav-feedback').classList.remove('active');
+      document.getElementById('nav-perfil').classList.remove('active');
+      document.getElementById('section-agenda').classList.add('d-none');
+      document.getElementById('section-feedback').classList.add('d-none');
+      document.getElementById('section-perfil').classList.add('d-none');
+      if(section === 'agenda') {
+        document.getElementById('nav-agenda').classList.add('active');
+        document.getElementById('section-agenda').classList.remove('d-none');
+      } else if(section === 'feedback') {
+        document.getElementById('nav-feedback').classList.add('active');
+        document.getElementById('section-feedback').classList.remove('d-none');
+      } else if(section === 'perfil') {
+        document.getElementById('nav-perfil').classList.add('active');
+        document.getElementById('section-perfil').classList.remove('d-none');
+      }
+    }
+  </script>
+</body>
+</html> 
